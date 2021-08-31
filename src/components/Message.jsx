@@ -43,7 +43,7 @@ export default function Message() {
             action={
                 <React.Fragment>
                     <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
-                        <CloseIcon fontSize="small" />
+                        <CloseIcon data-testid="iconClose" fontSize="small" />
                     </IconButton>
                 </React.Fragment>
             }

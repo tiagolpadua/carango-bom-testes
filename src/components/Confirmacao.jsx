@@ -12,10 +12,10 @@ function Confirmacao({ open, onClose, onConfirm, title, content }) {
             </DialogContentText>
         </DialogContent>
         <DialogActions>
-            <Button onClick={onClose} color="primary">
+            <Button onClick={onClose} color="primary" data-testid="btnDialogCancelar">
                 Cancelar
             </Button>
-            <Button onClick={onConfirm} color="primary" autoFocus>
+            <Button onClick={onConfirm} color="primary" autoFocus data-testid="btnDialogConfirmar">
                 Confirmar
             </Button>
         </DialogActions>

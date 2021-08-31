@@ -83,20 +83,22 @@ function ListagemMarcas() {
                     variant="contained"
                     color="secondary"
                     disabled={!marcaSelecionada}
+                    data-testid="btnExcluirMarca"
                     onClick={() => excluir()}>
                     Excluir
-                        </Button>
+                </Button>
                 <Button
                     className={classes.actions}
                     variant="contained"
                     color="primary"
                     disabled={!marcaSelecionada}
+                    data-testid="btnAlterarMarca"
                     onClick={() => alterar()}>
                     Alterar
                 </Button>
             </div>
 
-            <Fab color="primary" aria-label="add" className={classes.fab} onClick={() => history.push('/cadastro-marca')}>
+            <Fab color="primary" aria-label="add" data-testid="btnAdicionar" className={classes.fab} onClick={() => history.push('/cadastro-marca')}>
                 <AddIcon />
             </Fab>
 
@@ -104,10 +106,10 @@ function ListagemMarcas() {
                 open={openDialog}
                 onClose={handleCloseDialog}
                 onConfirm={handleConfirmDialog}
-                title='Excluir Veículo'
+                title='Excluir Marca'
                 content='Confirma a exclusão?'
             />
-        </div>
+        </div >
     );
 }
 
